@@ -12,7 +12,7 @@ function Message(props: MessageType) {
     return (
         <div className={s.message}>
             <div className={s.messageImageBlock}>
-                <img src={props.avatar}/>
+                <img src={props.avatar} alt=''/>
             </div>
             <div className={s.messageContent}>
                 <div className={s.name}>{props.name}</div>

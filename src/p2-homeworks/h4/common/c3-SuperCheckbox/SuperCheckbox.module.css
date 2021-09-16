@@ -1,5 +1,16 @@
-.checkbox {
+.labelForSuperCheckbox {
+    padding:5px 10px;
+    cursor:pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 
+.checkbox{
+    cursor:pointer;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
 }
 
 .spanClassName {

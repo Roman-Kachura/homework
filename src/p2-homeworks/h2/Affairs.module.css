@@ -1,3 +1,76 @@
-.someClass {
-
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 0px;
+    margin: 5px 0;
+    width: 350px;
+    color:red;
 }
+
+.low {
+    color: #28C76F;
+}
+
+.middle {
+    color: #0396FF;
+}
+
+.high {
+    color: #360940;
+}
+
+.name{
+    width: 33.333%;
+    /*margin-right: 10px;*/
+}
+
+.priority{
+    width: 33.333%;
+    /*margin-right: 10px;*/
+}
+
+.filterButtons{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.filterBtn{
+    cursor: pointer;
+    padding:10px 15px;
+    margin-right: 20px;
+    background:#7367F0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 2px;
+    display: block;
+    border: none;
+    outline: none;
+}
+
+.filterBtn:hover {
+    background: #2a2759;
+    text-decoration: none;
+}
+
+.filterBtnActive{
+    cursor: pointer;
+    padding:10px 15px;
+    margin-right: 20px;
+    background: #2a2759;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 2px;
+    display: block;
+    border: none;
+    outline: none;
+}
+

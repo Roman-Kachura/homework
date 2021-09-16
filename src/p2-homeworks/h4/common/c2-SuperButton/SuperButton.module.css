@@ -1,7 +1,50 @@
 .default {
+    background-image: linear-gradient(to right, #C04848 0%, #480048 51%, #C04848 100%);
+    margin: 10px 0;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.default:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
 
+.default:disabled{
+    opacity: .7;
+    background-position: center right;
+    cursor: not-allowed;
 }
 
 .red {
-    background: red;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+    margin: 10px 0;
+    padding: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 2px;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.red:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }

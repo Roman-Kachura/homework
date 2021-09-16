@@ -1,26 +1,36 @@
-import React from 'react'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import style from './../h4/common/c1-SuperInputText/SuperInputText.module.css'
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    name: string
+    setNameCallback: (value: string) => void
+    addUser: () => void
+    error: string
+    totalUsers: number
 }
 
-// презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
+    {name, setNameCallback, addUser, error, totalUsers}
 ) => {
-    const inputClass = s.error // need to fix with (?:)
+    const onKeyPressCallBack = (e:KeyboardEvent<HTMLInputElement>)=> {
+        if(e.key === 'Enter') addUser();
+    }
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+        <div className={s.someClass}>
+            <SuperInputText
+                placeholder={'Enter name'}
+                value={name}
+                onChange={(e) => setNameCallback(e.currentTarget.value.trim())}
+                onBlur={(e) => setNameCallback(e.currentTarget.value.trim())}
+                onKeyPress={onKeyPressCallBack}
+                error={error}
+                superInputBlockClassName={s.inputBlock}
+            />
+            <button disabled={!name} className={s.button} onClick={addUser}>ADD NAME</button>
+            <span className={s.totalUsers}>Total Users: {totalUsers}</span>
         </div>
     )
 }
