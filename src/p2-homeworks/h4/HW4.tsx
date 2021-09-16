@@ -21,10 +21,8 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
-            homeworks 4
-
             <div className={s.column}>
+                <h4>homeworks 4</h4>
                 <div className={s.superInputBlock}>
                     <SuperInputText
                         value={text}

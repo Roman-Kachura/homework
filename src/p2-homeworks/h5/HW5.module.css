@@ -1,0 +1,42 @@
+.title {
+    text-align: center;
+}
+
+.linkBlock {
+    box-sizing: border-box;
+    height: 40px;
+    position: relative;
+    margin-bottom: 50px;
+    top: -60px;
+    transition: .5s;
+}
+
+.linkBlock:hover {
+    top: 0;
+}
+
+
+.wrapper {
+    height: 100%;
+    background: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.wrapper a {
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #9572de;
+    transition: .3s;
+}
+
+.wrapper a:hover {
+    color: #5b4583;
+}
+
+.wrapper a.active {
+    color: rgba(80, 181, 255, 0.55);
+}
