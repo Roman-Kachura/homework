@@ -1,14 +1,37 @@
 .App {
-    padding:0;
+    padding: 0;
     position: relative;
 }
 
-.container{
-    padding:20px;
+.container {
+    padding: 20px;
     border-bottom: 1px solid #555;
     box-sizing: border-box;
 }
 
-.appTitle{
+.appTitle {
     text-align: center;
 }
+
+.superSpan {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    color: #777;
+
+}
+
+.superSpan img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background: #fff;
+}
+
+
+
+
+
+
+
+
