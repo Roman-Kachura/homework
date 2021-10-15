@@ -17,7 +17,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 
     return (
         <button
-            className={!className ? finalClassName : className}
+            className={!className ? finalClassName : className + ' ' + finalClassName}
             {...restProps}
         />
     )

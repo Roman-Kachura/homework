@@ -1,0 +1,92 @@
+.clock{
+
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #999;
+    width: 200px;
+    height: 100px;
+    background: #bbb;
+}
+
+.tableWrapper{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 180px;
+    height: 80px;
+    border: 1px solid #999;
+    padding:10px;
+}
+
+.time,.date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    font-size: 25px;
+}
+
+.btnBlock{
+    display: flex;
+}
+
+.btn{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background:#bbb;
+}
+
+.btnWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 80px;
+    width: 80px;
+    border:1px black solid;
+    border-radius: 50%;
+    background:#bbb;
+    color:#000;
+    font-family: sans-serif;
+}
+
+.startBtn .btnWrapper{
+    border:2px solid #19a119;
+}
+
+.startBtn:hover.btn{
+    background:#19a119;
+}
+
+.stopBtn .btnWrapper{
+    border:2px solid #ad0303;
+}
+
+.stopBtn:hover.btn{
+    background:#ad0303;
+}
+
+.btn:active{
+    transform: scale(.95);
+}
+
+.icon{
+    margin: auto;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}

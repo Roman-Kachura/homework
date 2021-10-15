@@ -1,0 +1,31 @@
+.container {
+    padding: 20px;
+    border-bottom: 1px solid #555;
+    box-sizing: border-box;
+}
+
+.peoplesBlock{
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.people{
+    margin: 5px 0;
+}
+
+.peopleName{
+    font-weight: 600;
+}
+
+.peopleAge{
+    color:red;
+}
+
+.btnBlock{
+    display: flex;
+}
+
+.button{
+    padding: 15px 20px;
+    margin-right: 10px;
+}
