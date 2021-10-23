@@ -1,6 +1,6 @@
 import React from 'react'
 import Clock from './Clock'
-import s from '../../p1-main/m1-ui/u1-app/App.module.css'
+import s from '../../p1-main/m1-ui/u1-app/App.module.css';
 
 function HW9() {
     return (
