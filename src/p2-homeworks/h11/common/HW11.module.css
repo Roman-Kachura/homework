@@ -1,0 +1,17 @@
+.superDoubleRange{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 50px 0 ;
+}
+
+.slider{
+    display: inline;
+    width: 300px;
+    margin: 0 10px;
+}
+
+.value{
+    display: inline-block;
+    width: 20px;
+}
