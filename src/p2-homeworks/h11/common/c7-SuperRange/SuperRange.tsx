@@ -1,5 +1,4 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from 'react'
-import s from './SuperRange.module.css';
+import React, {ChangeEvent,DetailedHTMLProps, InputHTMLAttributes, useState} from 'react'
 import style from './../HW11.module.css';
 import {Slider} from "@material-ui/core";
 
@@ -7,16 +6,16 @@ import {Slider} from "@material-ui/core";
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 
-type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
+type SuperRangePropsType = DefaultInputPropsType & {
     onChangeRange?: (value: number) => void
-    value?: number
+    value: number
     min?: number
     max?: number
     step?: number
     disable?: boolean
 };
 
-// const SuperRange: React.FC<SuperRangePropsType> = (
+{/* const SuperRange: React.FC<SuperRangePropsType> = (
 //     {
 //         type,
 //         onChange, onChangeRange,
@@ -48,10 +47,9 @@ type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы
 //             />
 //         </>
 //     )
-// }
+// */}
 
-{/*Alternative code*/
-}
+{/*Alternative code*/}
 
 //Раз уж я подключил библиотеку, то решил использовать её и здесь!
 
@@ -65,25 +63,22 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         step,
         disable,
 
-        ...restProps//
+        ...props//
     }
 ) => {
-    let [value, setValue] = useState(restProps.value ? restProps.value : 0);
-
-    const onChangeCallback = (e: React.ChangeEvent<{}>, value: number | number[]) => {
-        onChangeRange && onChangeRange(value as number);
-        setValue(value as number);
+    const onChangeCallback = (e:React.ChangeEvent<{}>, val: number | number[]) => {
+        onChangeRange && onChangeRange(val as number);
     }
 
 
     return (
         <div className={style.superDoubleRange}>
-            <span className={style.value}>{value}</span>
+            <span className={style.value}>{props.value}</span>
             <div className={style.slider}>
                 <Slider
                     aria-label="Always visible"
                     step={step}
-                    value={value}
+                    value={props.value}
                     valueLabelDisplay="auto"
                     onChange={onChangeCallback}
                     color='secondary'

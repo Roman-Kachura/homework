@@ -9,7 +9,6 @@ type SuperDoubleRangePropsType = {
     max?: number
     step?: number
     disable?: boolean
-    // min, max, step, disable, ...
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
@@ -21,18 +20,23 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         disable,
     }
 ) => {
-    let [value1, setValue1] = useState(value ? value[0] : 0);
-    let [value2, setValue2] = useState(value ? value[1] : 100);
+    let [value1, setValue1] = useState(0);
+    let [value2, setValue2] = useState(50);
+
+    if(value){
+        value1 = value[0];
+        value2 = value[1];
+    }
 
 
-    const onChange = (event: React.ChangeEvent<{}>, value: number | number[]) => {
-        if (typeof value === 'object') {
+    const onChange = (event: React.ChangeEvent<{}>, val: number | number[]) => {
+        if (typeof val === 'object') {
             if (onChangeRange) {
-                onChangeRange([value[0], value[1]]);
+                onChangeRange([val[0], val[1]]);
             }
 
-            setValue1(value[0]);
-            setValue2(value[1]);
+            setValue1(val[0]);
+            setValue2(val[1]);
         }
     }
     return (
@@ -42,7 +46,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                 <Slider
                     aria-label="Always visible"
                     step={step}
-                    value={value}
+                    value={value ? [value[0],value[1]] : [value1,value2]}
                     valueLabelDisplay="auto"
                     onChange={onChange}
                     min={min}

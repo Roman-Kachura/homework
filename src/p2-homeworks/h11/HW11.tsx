@@ -4,8 +4,8 @@ import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 import s from '../../p1-main/m1-ui/u1-app/App.module.css';
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+    const [value1, setValue1] = useState(0);
+    const [value2, setValue2] = useState(100);
 
     const onChangeValue = (value: number) => {
         setValue1(value);
@@ -20,8 +20,9 @@ function HW11() {
         <div className={s.container}>
             <h3>homeworks 11</h3>
             <div>
-                <SuperRange onChangeRange={onChangeValue}
-                            value={value1}
+                <SuperRange
+                    onChangeRange={onChangeValue}
+                    value={value1}
                 />
             </div>
 
