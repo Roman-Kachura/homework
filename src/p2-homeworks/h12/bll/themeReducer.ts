@@ -1,7 +1,7 @@
 import {ThemesType} from "../HW12";
 
 const initState = {
-    theme: 'some' as ThemesType
+    theme: 'dark' as ThemesType
 };
 
 export const themeReducer = (state = initState, action: ActionsType): {theme:ThemesType} => {

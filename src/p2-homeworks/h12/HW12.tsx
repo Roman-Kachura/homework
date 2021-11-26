@@ -23,7 +23,7 @@ function HW12() {
                 homeworks 12
             </h3>
 
-            <SuperSelect options={themes} onChangeOption={onChangeOption}/>
+            <SuperSelect value={theme} options={themes} onChangeOption={onChangeOption}/>
         </div>
     );
 }
